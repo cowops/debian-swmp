@@ -4,5 +4,5 @@
   with_items:
     - git
 
-- name: get swmp installer
+- name: get swmp
   git: repo=https://github.com/fuzzymannerz/swmp.git dest={{ swmp.destination }}
