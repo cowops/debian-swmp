@@ -1,8 +1,11 @@
 ---
 - name: install git
-  apt: pkg={{ item }} state=present
-  with_items:
-    - git
+  apt:
+    name: {{ packages }}
+    state: present
+  vars:
+    packages:
+      - git
 
 - name: get swmp
   git: repo=https://github.com/fuzzymannerz/swmp.git dest={{ swmp.destination }}
